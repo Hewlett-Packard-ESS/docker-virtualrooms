@@ -15,5 +15,11 @@ If your xserver isn't on :0, start it like this:
 ```
 docker run -ti --rm -e DISPLAY:$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix hpess/virtualrooms
 ```
+
+## Behind a corporate proxy
+If you're behind a proxy, pass through the environment variables like this:
+```
+docker run -ti --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e http_proxy=http://your-proxy:port -e https_proxy=http://your-proxy:port hpess/virtualrooms
+```
 ## Warnings
 This is by no means a piece of software supported by Hewlett-Packard, or HPVR, you use it at your own risk and by using the HPVR software you're subject to their licence terms and conditions too.
