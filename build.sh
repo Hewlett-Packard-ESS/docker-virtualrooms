@@ -1,1 +1,1 @@
-docker build -t hpess/virtualrooms:latest . 
+docker build -t hpess/virtualrooms:master . 
